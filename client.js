@@ -190,12 +190,12 @@ module.exports = class PhemexClient {
 
   // ListWithdraws `GET /exchange/wallets/withdrawList`
   async ListWithdraws(params) {
-    assert(params, "No params were passed");
+    assert(params.currency, "Parameter currency is required");
     return await this.request.getRequest("/exchange/wallets/withdrawList", params);
   };
 
   // Withdraw Address Management `POST /exchange/wallets/createWithdrawAddress`
-  async ListWithdraws(params) {
+  async WithdrawAddressManagement(params) {
     assert(params, "No params were passed");
     assert(params.address, "Parameter address is required");
     assert(params.currency, "Parameter currency is required");
