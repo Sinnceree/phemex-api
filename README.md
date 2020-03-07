@@ -27,5 +27,5 @@ This is the [Official Phemex Documentation](https://github.com/phemex/phemex-api
 information on endpoints and what params they require/have.
 
 ## Todo
-Finish adding endpoints.
-Add Web socket support.
+- Finish adding endpoints.
+- Add Web socket support.
