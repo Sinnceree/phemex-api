@@ -1,0 +1,16 @@
+{
+  "name": "phemex-api",
+  "version": "1.0.0",
+  "description": "Basic Phemex API NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "VoXzE",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2"
+  }
+}
