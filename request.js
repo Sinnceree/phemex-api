@@ -14,11 +14,11 @@ module.exports = class Request {
   };
 
   async getRequest(endpoint, params) {
-    return await this.makeRequest("GET", endpoint, params);;
+    return await this.makeRequest("GET", endpoint, params);
   };
 
   async postRequest(endpoint, params) {
-    return await this.makeRequest("POST", endpoint, params);;
+    return await this.makeRequest("POST", endpoint, params);
   };
 
   async putRequest(endpoint, params) {
@@ -26,7 +26,7 @@ module.exports = class Request {
   };
 
   async deleteRequest(endpoint, params) {
-    return await this.makeRequest("DELETE", endpoint, params);;
+    return await this.makeRequest("DELETE", endpoint, params);
   };
 
   async makeRequest(method, endpoint, params) {
@@ -44,6 +44,8 @@ module.exports = class Request {
       } else {
         content = `${endpoint}${expiry}`;
       };
+
+    }
 
 
       if (method === "POST") {
@@ -88,8 +90,7 @@ module.exports = class Request {
           }
         });
       });
-    };
-  }
+  };
 
   generateSignature(message, secret) {
     return createHmac("sha256", secret).update(message).digest("hex")
