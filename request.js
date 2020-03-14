@@ -37,7 +37,6 @@ module.exports = class Request {
     let content;
 
     if (method === "GET" || method === "DELETE" || method === "PUT") {
-
       // Lets check if params is not undefined
       if (params !== undefined) {
         content = `${endpoint}${this.serializeParams(params) + expiry}`;
